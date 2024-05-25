@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:paddingBottom="25dp"
+    android:background="@drawable/dialog_shape"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        app:boxCornerRadiusTopStart="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/lightRedAccent"
+        android:hint="Input new task here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/task"
+            android:background="#FBEAFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.appcompat.widget.AppCompatEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/task_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:entries="@array/task_type"
+            />
+
+
+        <Button
+            android:id="@+id/date_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:background="@color/lightRedAccent"
+            android:backgroundTint="@color/lightRedAccent"
+            app:icon="@drawable/ic_baseline_calendar_today_24"
+            app:iconGravity="textStart"
+            android:onClick="onDateButtonClick"
+            app:rippleColor="@color/white" />
+
+        <RelativeLayout
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:onClick="onSendButtonClick"
+                android:src="@drawable/ic_baseline_send_24" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
